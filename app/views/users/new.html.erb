@@ -1,0 +1,26 @@
+<h2>スケジュール新規作成</h2>
+
+<%= render "shared/error", obj: @user %>
+
+<%= form_for @user do |f| %>
+    <table>
+        <tr>
+            <th><%= f.label :tittle ,"タイトル" %></th>
+            <td><%= f.text_field :tittle %></td>
+        </tr>
+        <tr>
+            <th><%= f.label :starttime ,"開始日" %></th>
+            <td><%= f.text_field :starttime %></td>
+        </tr>
+        <tr>
+            <th><%= f.label :age ,"終了日" %></th>
+            <td><%= f.text_field :finishtime%></td>
+        </tr>
+    </table>
+    <div>
+        <ul>
+            <li><%= f.submit "登録完了する"%></li>
+            <li><%= link_to "スケジュール一覧に戻る", :users %></li>
+        </ul>
+    </div>
+<% end %>
